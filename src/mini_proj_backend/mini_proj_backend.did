@@ -1,3 +1,4 @@
 service : {
     "greet": (text) -> (text) query;
+    "generate_report_card": (text, nat32, nat32, nat32) -> (record { name: text; total_marks: nat32; num_subjects: nat32; average: float32; grade: text }) query;
 }

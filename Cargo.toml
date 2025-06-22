@@ -1,5 +1,5 @@
 [workspace]
-members = [
+members = [ "report_card_cli",
     "src/mini_proj_backend"
 ]
 resolver = "2"

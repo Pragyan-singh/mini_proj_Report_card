@@ -14,5 +14,8 @@
   "type": "module",
   "workspaces": [
     "src/mini_proj_frontend"
-  ]
+  ],
+  "dependencies": {
+    "jspdf": "^3.0.1"
+  }
 }

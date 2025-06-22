@@ -2,10 +2,16 @@ import { defineConfig } from 'vite';
 import { fileURLToPath, URL } from 'url';
 import environment from 'vite-plugin-environment';
 import dotenv from 'dotenv';
+import react from '@vitejs/plugin-react';
 
 dotenv.config({ path: '../../.env' });
 
 export default defineConfig({
+  plugins: [
+    react(),
+    environment("all", { prefix: "CANISTER_" }),
+    environment("all", { prefix: "DFX_" }),
+  ],
   build: {
     emptyOutDir: true,
   },
@@ -25,10 +31,6 @@ export default defineConfig({
     },
   },
   publicDir: "assets",
-  plugins: [
-    environment("all", { prefix: "CANISTER_" }),
-    environment("all", { prefix: "DFX_" }),
-  ],
   resolve: {
     alias: [
       {
