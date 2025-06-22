@@ -1,0 +1,27 @@
+{
+  "canisters": {
+    "mini_proj_backend": {
+      "candid": "src/mini_proj_backend/mini_proj_backend.did",
+      "package": "mini_proj_backend",
+      "type": "rust"
+    },
+    "mini_proj_frontend": {
+      "dependencies": [
+        "mini_proj_backend"
+      ],
+      "source": [
+        "src/mini_proj_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "mini_proj_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
